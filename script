@@ -1,0 +1,15 @@
+# Run flask
+export FLASK_ENV=development
+flask run
+
+# Write in memory
+curl 127.0.0.1:5000/memory/foo --header 'Content-Type: application/json' --data '{"data": "Some data in memory"}'
+
+# Read from memory
+curl 127.0.0.1:5000/memory/foo -w "\n"
+
+# Write in disk
+curl 127.0.0.1:5000/disk/foo --header 'Content-Type: application/json' --data '{"data": "Some data in disk"}'
+
+# Read from disk
+curl 127.0.0.1:5000/disk/foo -w "\n"
