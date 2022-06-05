@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Listening on port 8081
+nc -l 8081
